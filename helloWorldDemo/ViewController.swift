@@ -19,7 +19,20 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBOutlet var labelDisplay: UILabel!
+    
+    var counter = 0
 
+    @IBAction func buttonPressed(sender: AnyObject) {
+        
+        labelDisplay.text = "Hello world \(counter++)"
+        
+    }
 
+    @IBAction func buttoffPressed(sender: AnyObject) {
+        
+        labelDisplay.text = "Hello world \(counter--)"
+    }
 }
 
